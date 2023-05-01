@@ -1,4 +1,3 @@
-from os import environ
 from pyrogram import Client, filters
 from pyrogram.types import InputMediaVideo, InputMediaDocument
 from pymongo import MongoClient
