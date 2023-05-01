@@ -2,14 +2,14 @@ from os import environ
 from pyrogram import Client, filters
 from pyrogram.types import InputMediaVideo, InputMediaDocument
 from pymongo import MongoClient
-from info import DATABASE_URI, DATABASE_NAME, COLLECTION_NAME, ADMINS, BOT_TOKEN
+
 
 # Set up the MongoDB client
-mongo_client = MongoClient(DATABASE_URI)
-mongo_collection = mongo_client[DATABASE_NAME][COLLECTION_NAME]
+mongo_client = MongoClient("mongodb+srv://amal:amal@cluster0.dlmfo.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+mongo_collection = mongo_client["amalser"]["Telegram_files"]
 
 # Define the admin user ID
-ADMIN_USER_ID = ADMINS
+ADMIN_USER_ID = "1869495895"
 
 # Create a Pyrogram client instance
 app = Client("my_bot", bot_token="6216947279:AAEYIUjQMaL5XMB7MDz2C7kZM5PnZm0Hfc4", api_id=24081768, api_hash="15ead37b9f2c7cf765059a6406903261")
